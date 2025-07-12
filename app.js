@@ -1,13 +1,13 @@
-function capitalize(str) {
+export function capitalize(str) {
     return str[0].toUpperCase();
 }
 
-function reverseString(str) {
+export function reverseString(str) {
     if (str.length === 0) return "";
     return reverseString(str.slice(1, str.length)) + str[0];
 }
 
-const calculator = {
+export const calculator = {
     add(x, y) {
         return x + y;
     },
@@ -22,7 +22,7 @@ const calculator = {
     },
 };
 
-function caesarCipher(str, shift) {
+export function caesarCipher(str, shift) {
     const lowercaseArr = Array.from({ length: 26 }, (_, i) =>
         String.fromCharCode(97 + i)
     );
@@ -45,7 +45,7 @@ function caesarCipher(str, shift) {
     return result;
 }
 
-function analyzeArray(arr) {
+export function analyzeArray(arr) {
     let sum = 0;
     let min = Infinity;
     let max = -Infinity;
@@ -61,11 +61,3 @@ function analyzeArray(arr) {
         length: arr.length,
     };
 }
-
-module.exports = {
-    capitalize,
-    reverseString,
-    calculator,
-    caesarCipher,
-    analyzeArray,
-};
